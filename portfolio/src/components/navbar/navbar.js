@@ -9,29 +9,29 @@ class Navbar extends Component {
     return (
       <div>
         <p>show this message</p>
-        <nav class="border fixed split-nav">
-          <div class="nav-brand">
+        <nav className="border fixed split-nav">
+          <div className="nav-brand">
             <h3>CHI'S PORTFOLIOS</h3>
           </div>
-          <div class="collapsible">
+          <div className="collapsible">
             <input id="collapsible1" type="checkbox" name="collapsible1" />
             <button>
               <label for="collapsible1">
-                <div class="bar1" />
-                <div class="bar2" />
-                <div class="bar3" />
+                <div className="bar1" />
+                <div className="bar2" />
+                <div className="bar3" />
               </label>
             </button>
-            <div class="collapsible-body">
-              <ul class="inline">
+            <div className="collapsible-body">
+              <ul className="inline">
                 <li>
-                  <a href="#">Documentation</a>
+                  <a href="#">Capabilities</a>
                 </li>
                 <li>
-                  <a href="#">About</a>
+                  <a href="#">Works</a>
                 </li>
                 <li>
-                  <a href="#">Github</a>
+                  <a href="#">What's New</a>
                 </li>
               </ul>
             </div>

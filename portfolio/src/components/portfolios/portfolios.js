@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./Portfolios.css"
+import "./Portfolios.css";
 
 class Portfolios extends Component {
   constructor(props) {
@@ -8,60 +8,74 @@ class Portfolios extends Component {
   }
   render() {
     return (
-      <div>
-        <div className="card col-12" 
-        style={{ width: "40rem" ,margin:"auto"}}
-        >
-          <div className="card-header">Header</div>
-          <img src="https://picsum.photos/768" alt="Card example image" />
+      <div style={{ width: "80vw", margin: "3em auto" }}>
+        <div className="row">
+          <div
+            className="card sm-12 md-7 col"
+            style={{ width: "40rem", margin: "3em auto" }}
+          >
+            <div className="card-header">Header</div>
+            <img src="https://picsum.photos/500" alt="Card example image" />
 
-          <div className="card-body">
-            <h4 className="card-title">My awesome Paper card!</h4>
-            <h5 className="card-subtitle">Nice looking subtitle.</h5>
-            <p className="card-text">
-              Notice that the card width in this example have been set to 20rem,
-              otherwise it will try to fill the current container/row where the
-              card is.
-            </p>
-            <button>Let me go here!</button>
+            <div className="card-body">
+              <h4 className="card-title">My awesome Paper card!</h4>
+              <h5 className="card-subtitle">Nice looking subtitle.</h5>
+              <p className="card-text">
+                Notice that the card width in this example have been set to
+                20rem, otherwise it will try to fill the current container/row
+                where the card is.
+              </p>
+              <wired-card elevation="4">
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Natus qui mollitia voluptatibus aut aspernatur quidem
+                  repudiandae, voluptate sint itaque explicabo?
+                </p>
+              </wired-card>
+              <hr />
+              <button>Visit the site</button>
+            </div>
+          </div>
+
+          <div
+            className="card sm-12 md-4 col"
+            style={{ width: "10rem", margin: "1em auto" }}
+          >
+            <div className="card-body">
+              <h4 className="card-title">My awesome Paper card!</h4>
+              <h5 className="card-subtitle">Nice looking subtitle.</h5>
+              <p className="card-text">
+                This is another example of a card without image. Cards are also
+                meant to be used without images, but with text/links/buttons.
+              </p>
+              <a className="card-link" href="#">
+                First link
+              </a>
+              <a className="card-link" href="#">
+                Second link
+              </a>
+            </div>
           </div>
         </div>
-
-        {/* <Arwes
-          background="/static/img/background.jpg"
-          pattern="/static/img/glow.png"
-        >
-          <Frame
-            show={this.state.show}
-            animate={true}
-            level={3}
-            corners={4}
-            layer="primary"
-          >
-            <h2 style={{ padding: "20px 40px", fontSize: "32px" }}>
-              show this message
-            </h2>
-          </Frame>
-          <div style={{ padding: 40 }}>
-            <Project
-              animate
-              header="PROJECT, OFFICIA DESERUNT ANIM ID EST LABORUM"
-            >
-              {anim => (
-                <p>
-                  <Words animate show={anim.entered}>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis laboris nisi ut
-                    aliquip ex. Duis aute irure. Consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud.
-                  </Words>
-                </p>
-              )}
-            </Project>
+        <div className="row">
+          <div class="col-4 col">
+            <div className="card">
+              <p className="card-text">col-4 col</p>
+            </div>
           </div>
-        </Arwes> */}
+
+          <div class="col-4 col">
+            <div className="card">
+              <p className="card-text">col-4 col</p>
+            </div>
+          </div>
+
+          <div class="col-4 col">
+            <div className="card">
+              <p className="card-text">col-4 col</p>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
