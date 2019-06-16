@@ -13,7 +13,7 @@ function App() {
         <div className="App">
           <header className="App-header" />
           <Navbar />
-          <Portfolios />
+          {/* <Portfolios /> */}
 
           <div style={{ width: "100%", height: "100%" }} />
         </div>
