@@ -2,13 +2,8 @@ import React, { Component } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Route, Link } from "react-router-dom";
 import Portfolios from "../portfolios/portfolios";
-import Articles from "../articles/articles"
-
-const Index = () => {
-  return <h2>Home</h2>;
-};
-
-
+import Articles from "../articles/articles";
+import Home from "../home/Home";
 
 class Navbar extends Component {
   constructor(props) {
@@ -50,7 +45,7 @@ class Navbar extends Component {
             </div>
           </nav>
         </div>
-        <Route path="/" exact component={Index} />
+        <Route path="/" exact component={Home} />
         <Route path="/works/" component={Portfolios} />
         <Route path="/articles/" component={Articles} />
       </Router>

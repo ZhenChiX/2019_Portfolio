@@ -8,7 +8,7 @@ class Articles extends Component {
   }
   render() {
     return (
-      <div style={{ width: "85vw", margin: "3em auto" }}>
+      <div style={{ width: "80vw", margin: "3em auto" }}>
         <div className="row flex-center">
           <div
             className="card sm-12 md-7 col"
@@ -41,7 +41,7 @@ class Articles extends Component {
             className="card sm-12 md-4 col"
             style={{
               // width: "5rem",
-              margin: "2em auto"
+              margin: "1em auto"
             }}
           >
             <wired-card class="API-news" elevation="3">
