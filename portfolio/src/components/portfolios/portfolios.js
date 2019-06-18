@@ -1,25 +1,109 @@
 import React, { Component } from "react";
 import "./Portfolios.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "react-image-gallery/styles/css/image-gallery.css";
+import ImageGallery from "react-image-gallery";
+import portfolio_logo from "../../img/chi-portfolio-logo.PNG";
+import desktop_hp1 from "../../img/mockup/desktop-hp1.png";
+import desktop_hp2 from "../../img/mockup/desktop-hp2.png";
+import mobile_hp1 from "../../img/mockup/mobile-hp1.png";
+import mobile_hp2 from "../../img/mockup/mobile-hp2.png";
+import desktop_gi1 from "../../img/mockup/desktop-gi1.png";
+import desktop_gi2 from "../../img/mockup/desktop-gi2.png";
+import mobile_gi1 from "../../img/mockup/mobile-gi1.png";
+import mobile_gi2 from "../../img/mockup/mobile-gi2.png";
+import desktop_gt1 from "../../img/mockup/desktop-gt1.png";
+import desktop_gt2 from "../../img/mockup/desktop-gt2.png";
+import mobile_gt1 from "../../img/mockup/mobile-gt1.png";
+import mobile_gt2 from "../../img/mockup/mobile-gt2.png";
 
 class Portfolios extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      slideOnThumbnailOver: true
+    };
   }
+
   render() {
+    const images_hp = [
+      {
+        original: desktop_hp1,
+        thumbnail: desktop_hp1
+      },
+      {
+        original: desktop_hp2,
+        thumbnail: desktop_hp2
+      },
+      {
+        original: mobile_hp1,
+        thumbnail: mobile_hp1
+      },
+      {
+        original: mobile_hp2,
+        thumbnail: mobile_hp2
+      }
+    ];
+
+    const images_gi = [
+      {
+        original: desktop_gi1,
+        thumbnail: desktop_gi1
+      },
+      {
+        original: desktop_gi2,
+        thumbnail: desktop_gi2
+      },
+      {
+        original: mobile_gi1,
+        thumbnail: mobile_gi1
+      },
+      {
+        original: mobile_gi2,
+        thumbnail: mobile_gi2
+      }
+    ];
+    const images_gt = [
+      {
+        original: desktop_gt1,
+        thumbnail: desktop_gt1
+      },
+      {
+        original: desktop_gt2,
+        thumbnail: desktop_gt2
+      },
+      {
+        original: mobile_gt1,
+        thumbnail: mobile_gt1
+      },
+      {
+        original: mobile_gt2,
+        thumbnail: mobile_gt2
+      }
+    ];
+
     return (
-      <div style={{ width: "80vw", margin: "1em auto" }}>
+      <div style={{ width: "85vw", margin: "1em auto" }}>
         <div className="row flex-center">
+          <img
+            className="portfolio_logo sm-0 md-2 col"
+            src={portfolio_logo}
+            alt="portfolio logo."
+          />
           <div
-            className="card sm-12 md-7 col"
+            className="card sm-12 md-6 col"
             style={{ width: "40rem", margin: "2em auto" }}
           >
             <div className="card portfolio-card">
               <div className="card-header">Harvest Prediction Demo</div>
-              <img
-                src="https://picsum.photos/300"
-                alt="portfolio screen shot"
+
+              <ImageGallery
+                items={images_hp}
+                lazyLoad={true}
+                showNav={false}
+                showPlayButton={false}
+                thumbnailPosition="right"
+                showBullets={true}
+                slideOnThumbnailOver={this.state.slideOnThumbnailOver}
               />
 
               <div className="card-body">
@@ -72,9 +156,14 @@ class Portfolios extends Component {
 
             <div className="card portfolio-card">
               <div className="card-header">Guard Impact</div>
-              <img
-                src="https://picsum.photos/300"
-                alt="portfolio screen shot"
+              <ImageGallery
+                items={images_gi}
+                lazyLoad={true}
+                showNav={false}
+                showPlayButton={false}
+                thumbnailPosition="right"
+                showBullets={true}
+                slideOnThumbnailOver={this.state.slideOnThumbnailOver}
               />
 
               <div className="card-body">
@@ -85,7 +174,7 @@ class Portfolios extends Component {
                 <p className="card-text">
                   <p>
                     A simple tool to lookup characters framedata for better
-                    understand and improve your game plan for{" "}
+                    understand and improve your game plan for
                     <span className="badge warning">SoulCalibur VI</span>
                   </p>
                   <p />
@@ -125,13 +214,20 @@ class Portfolios extends Component {
 
             <div className="card portfolio-card">
               <div className="card-header">Game Tracker</div>
-              <img
-                src="https://picsum.photos/300"
-                alt="portfolio screen shot"
+              <ImageGallery
+                items={images_gt}
+                lazyLoad={true}
+                showNav={false}
+                showPlayButton={false}
+                thumbnailPosition="right"
+                showBullets={true}
+                slideOnThumbnailOver={this.state.slideOnThumbnailOver}
               />
 
               <div className="card-body">
-                <h4 className="card-title">Game Tracker</h4>
+                <h4 className="card-title">
+                  Game Tracker -- Video game database
+                </h4>
                 <h5 className="card-subtitle">Web Developer</h5>
                 <p className="card-text">
                   <p>
@@ -172,7 +268,7 @@ class Portfolios extends Component {
             </div>
           </div>
 
-          <div className="sm-12 md-4 col">
+          <div className="sm-12 md-3 col">
             <div className="card">
               <wired-card class="API-news" elevation="3">
                 <div className="card-body">
@@ -208,25 +304,6 @@ class Portfolios extends Component {
                   </a>
                 </div>
               </wired-card>
-            </div>
-          </div>
-        </div>
-        <div className="row">
-          <div class="col-4 col">
-            <div className="card">
-              <p className="card-text">col-4 col</p>
-            </div>
-          </div>
-
-          <div className="col-4 col">
-            <div className="card">
-              <p className="card-text">col-4 col</p>
-            </div>
-          </div>
-
-          <div className="col-4 col">
-            <div className="card">
-              <p className="card-text">col-4 col</p>
             </div>
           </div>
         </div>
