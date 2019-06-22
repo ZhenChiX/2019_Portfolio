@@ -10,7 +10,10 @@ class Navbar extends Component {
     super(props);
     this.state = {};
   }
-
+  componentDidMount() {
+    window.scrollTo(0, 0);
+    console.log("click");
+  }
   render() {
     return (
       <Router>
@@ -32,10 +35,10 @@ class Navbar extends Component {
               <div className="collapsible-body">
                 <ul className="inline">
                   <li>
-                    <Link to="/">Capabilities</Link>
+                    <Link to="/home">Capabilities</Link>
                   </li>
                   <li>
-                    <Link to="/works">Works</Link>
+                    <Link to="/">Works</Link>
                   </li>
                   <li>
                     <Link to="articles">What's New</Link>
@@ -45,8 +48,8 @@ class Navbar extends Component {
             </div>
           </nav>
         </div>
-        <Route path="/" exact component={Home} />
-        <Route path="/works/" component={Portfolios} />
+        <Route path="/home/" component={Home} />
+        <Route path="/" exact component={Portfolios} />
         <Route path="/articles/" component={Articles} />
       </Router>
     );

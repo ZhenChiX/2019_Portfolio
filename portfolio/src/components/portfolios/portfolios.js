@@ -272,12 +272,11 @@ class Portfolios extends Component {
             <div className="card">
               <wired-card class="API-news" elevation="3">
                 <div className="card-body">
-                  <h4 className="card-title">My awesome Paper card!</h4>
-                  <h5 className="card-subtitle">Nice looking subtitle.</h5>
+                  <h4 className="card-title">Website Revamping</h4>
+                  <h5 className="card-subtitle">Coming soon...</h5>
                   <p className="card-text">
-                    This is another example of a card without image. Cards are
-                    also meant to be used without images, but with
-                    text/links/buttons.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Odio quibusdam similique rem culpa alias eum!
                   </p>
                   <a className="card-link" href="#">
                     First link
@@ -289,12 +288,11 @@ class Portfolios extends Component {
               </wired-card>
               <wired-card class="API-news" elevation="3">
                 <div className="card-body">
-                  <h4 className="card-title">My awesome Paper card!</h4>
-                  <h5 className="card-subtitle">Nice looking subtitle.</h5>
+                  <h4 className="card-title">Website Revamping</h4>
+                  <h5 className="card-subtitle">Coming soon...</h5>
                   <p className="card-text">
-                    This is another example of a card without image. Cards are
-                    also meant to be used without images, but with
-                    text/links/buttons.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Odio quibusdam similique rem culpa alias eum!
                   </p>
                   <a className="card-link" href="#">
                     First link

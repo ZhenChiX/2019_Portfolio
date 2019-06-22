@@ -1,3 +1,11 @@
 .API-news {
     margin: 0.2em auto;
 }
+
+.article-title {
+    font-weight: bold;
+}
+
+.article-body:hover {
+    outline: solid 1px black;
+}
