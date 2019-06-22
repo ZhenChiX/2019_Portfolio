@@ -10,13 +10,15 @@ import Footer from "./components/footer/footer";
 function App() {
   return (
     <ThemeProvider theme={createTheme()}>
-      <Puffs quantity={44}>
+      <div>
+        {/* <Puffs quantity={44}> */}
         <div className="App">
           <header className="App-header" />
           <Navbar />
           <Footer />
         </div>
-      </Puffs>
+        {/* </Puffs> */}
+      </div>
     </ThemeProvider>
   );
 }

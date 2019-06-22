@@ -10,7 +10,10 @@ class Navbar extends Component {
     super(props);
     this.state = {};
   }
-
+  componentDidMount() {
+    window.scrollTo(0, 0);
+    console.log("click");
+  }
   render() {
     return (
       <Router>
@@ -34,11 +37,12 @@ class Navbar extends Component {
                   <li>
                     <Link to="/home">Capabilities</Link>
                   </li>
-                  <Link to="/">Works</Link>
-                  <li />
-                  {/* <li>
+                  <li>
+                    <Link to="/">Works</Link>
+                  </li>
+                  <li>
                     <Link to="articles">What's New</Link>
-                  </li> */}
+                  </li>
                 </ul>
               </div>
             </div>
@@ -46,7 +50,7 @@ class Navbar extends Component {
         </div>
         <Route path="/home/" component={Home} />
         <Route path="/" exact component={Portfolios} />
-        {/* <Route path="/articles/" component={Articles} /> */}
+        <Route path="/articles/" component={Articles} />
       </Router>
     );
   }

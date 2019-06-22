@@ -1,12 +1,45 @@
 import React, { Component } from "react";
 import "./Articles.css";
+import { async } from "q";
+
+// const API_KEY = process.env.REACT_APP_API_KEY
+
+const API_KEY = "45829221655b4ae8a3f912d8b16b331a";
+const API_URL = `https://newsapi.org/v2/top-headlines?language=en&sources=techcrunch,the-verge,engadget&apiKey=${API_KEY}`;
 
 class Articles extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      status: "",
+      articles: null
+    };
   }
+  componentDidMount() {
+    console.log(API_URL);
+    this.fetchAPI();
+  }
+
+  fetchAPI = async () => {
+    let response = await fetch(API_URL);
+    let data = await response.json();
+    if (data.status === "ok") {
+      try {
+        this.setState({
+          status: data.status,
+          articles: data.articles
+        });
+      } catch (error) {
+        console.log(error);
+      }
+    } else {
+      console.log(data.status);
+      console.log("Something went wrong");
+    }
+  };
   render() {
+    console.log(this.state);
+
     return (
       <div style={{ width: "80vw", margin: "3em auto" }}>
         <div className="row flex-center">
@@ -40,63 +73,25 @@ class Articles extends Component {
           <div
             className="card sm-12 md-4 col"
             style={{
-              // width: "5rem",
               margin: "1em auto"
             }}
           >
-            <wired-card class="API-news" elevation="3">
-              <div className="card-body">
-                <h4 className="card-title">My awesome Paper card!</h4>
-                <h5 className="card-subtitle">Nice looking subtitle.</h5>
-                <p className="card-text">
-                  This is another example of a card without image. Cards are
-                  also meant to be used without images, but with
-                  text/links/buttons.
-                </p>
-                <a className="card-link" href="#">
-                  First link
-                </a>
-                <a className="card-link" href="#">
-                  Second link
-                </a>
-              </div>
-            </wired-card>
-            <wired-card class="API-news" elevation="3">
-              <div className="card-body">
-                <h4 className="card-title">My awesome Paper card!</h4>
-                <h5 className="card-subtitle">Nice looking subtitle.</h5>
-                <p className="card-text">
-                  This is another example of a card without image. Cards are
-                  also meant to be used without images, but with
-                  text/links/buttons.
-                </p>
-                <a className="card-link" href="#">
-                  First link
-                </a>
-                <a className="card-link" href="#">
-                  Second link
-                </a>
-              </div>
-            </wired-card>
-          </div>
-        </div>
-        <div className="row">
-          <div class="col-4 col">
-            <div className="card">
-              <p className="card-text">col-4 col</p>
-            </div>
-          </div>
+            {this.state.articles &&
+              this.state.articles.map((article, key) => (
+                <wired-card key={key} class="API-news" elevation="3">
+                  <div className="card-body article-body">
+                    <p className="card-title article-title">{article.title}</p>
+                    <h5 className="card-subtitle">
+                      {article.author} / {article.source.name}
+                    </h5>
 
-          <div class="col-4 col">
-            <div className="card">
-              <p className="card-text">col-4 col</p>
-            </div>
-          </div>
-
-          <div class="col-4 col">
-            <div className="card">
-              <p className="card-text">col-4 col</p>
-            </div>
+                    <p className="card-text">{article.description}</p>
+                    <a className="card-link" href={article.url} target="_blank">
+                      Read More...
+                    </a>
+                  </div>
+                </wired-card>
+              ))}
           </div>
         </div>
       </div>
