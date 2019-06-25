@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Home.css";
+import home_logo from "../../img/chi-developer-logo.png";
 
 class Home extends Component {
   constructor(props) {
@@ -9,9 +10,14 @@ class Home extends Component {
   render() {
     return (
       <div className="home">
-        <div className="card sm-12 col">
+        <div className="card">
           <div className="card-header">
-            <h2>Website Under Construction</h2>
+            <img className="home_logo" src={home_logo} alt="home logo." />
+            <h2 className="home_header">
+              Hello, I'm Chi.
+              <br />
+              I'm a Front-end Developer
+            </h2>
           </div>
         </div>
       </div>

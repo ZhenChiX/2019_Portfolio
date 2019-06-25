@@ -1,8 +1,12 @@
 .App {
     background-color: #f9f9f9;
-    min-height: 90vh;
+    min-height: 95vh;
 }
 
 .card {
     background-color: white;
+}
+
+.row {
+    margin-bottom: 0em
 }
