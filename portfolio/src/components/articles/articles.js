@@ -23,17 +23,17 @@ class Articles extends Component {
   fetchAPI = async () => {
     let response = await fetch(API_URL);
     let data = await response.json();
-    if (data.status === "ok") {
+    if (response.ok) {
       try {
         this.setState({
-          status: data.status,
+          status: response.status,
           articles: data.articles
         });
       } catch (error) {
         console.log(error);
       }
     } else {
-      console.log(data.status);
+      console.log(response.status);
       console.log("Something went wrong");
     }
   };
@@ -41,7 +41,7 @@ class Articles extends Component {
     console.log(this.state);
 
     return (
-      <div style={{ width: "80vw", margin: "3em auto" }}>
+      <div className="article-page" style={{ width: "80vw" }}>
         <div className="row flex-center">
           <div
             className="card sm-12 md-7 col"

@@ -2,6 +2,11 @@
     margin: 0.2em auto;
 }
 
+.article-page {
+    margin: 3em auto;
+    margin-bottom: 0em;
+}
+
 .article-title {
     font-weight: bold;
 }

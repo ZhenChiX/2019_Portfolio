@@ -82,7 +82,7 @@ class Portfolios extends Component {
     ];
 
     return (
-      <div style={{ width: "85vw", margin: "1em auto" }}>
+      <div className="portfolio-page">
         <div className="row flex-center">
           <img
             className="portfolio_logo sm-0 md-2 col"

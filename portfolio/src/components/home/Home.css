@@ -1,5 +1,42 @@
+.home {
+    width: 90vw;
+    margin: auto;
+    margin-top: 4em;
+}
 
+.home>.card {
+    width: 60vw;
+    margin: auto;
+}
+
+.card-header {
+    position: relative;
+}
 
 .card-header>h2 {
     text-align: center;
+}
+
+.home_logo {
+    position: absolute;
+    top: -2em;
+    right: -5em;
+    max-width: 250px;
+    height: 250px;
+    margin: auto;
+    box-shadow: 0.3em 0.5em 2em grey;
+    border-radius: 50% !important;
+    z-index: 888;
+    background-color: rgba(255, 255, 255, 0.9)
+}
+
+@media screen and (max-width:990px) {
+    .home_logo {
+        position: relative;
+        top: 0em;
+        right: 0em;
+    }
+    .home>.card {
+        width: 90vw;
+    }
 }
