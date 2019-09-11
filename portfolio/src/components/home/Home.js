@@ -20,6 +20,35 @@ class Home extends Component {
             </h2>
           </div>
         </div>
+        <div className="home-list row flex-edges">
+          <div className="card sm-3 col">
+            <div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+                explicabo natus ipsam nostrum modi ipsa odio dicta molestiae
+                ullam similique.
+              </p>
+            </div>
+          </div>
+          <div className="card sm-3 col">
+            <div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+                explicabo natus ipsam nostrum modi ipsa odio dicta molestiae
+                ullam similique.
+              </p>
+            </div>
+          </div>
+          <div className="card sm-3 col">
+            <div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+                explicabo natus ipsam nostrum modi ipsa odio dicta molestiae
+                ullam similique.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

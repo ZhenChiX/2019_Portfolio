@@ -41,7 +41,7 @@ class Articles extends Component {
     console.log(this.state);
 
     return (
-      <div className="article-page" style={{ width: "80vw" }}>
+      <div className="article-page">
         <div className="row flex-center">
           <div
             className="card sm-12 md-7 col"
@@ -69,7 +69,6 @@ class Articles extends Component {
               <button>Visit the site</button>
             </div>
           </div>
-
           <div
             className="card sm-12 md-4 col"
             style={{
