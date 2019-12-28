@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Articles.css";
-import { async } from "q";
+// import { async } from "q";
 
 // const API_KEY = process.env.REACT_APP_API_KEY
 
