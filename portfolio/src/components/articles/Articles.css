@@ -14,3 +14,13 @@
 .article-body:hover {
     outline: solid 1px black;
 }
+
+.article-page {
+    width: 80vw;
+}
+
+@media screen and (max-width:990px) {
+    .article-page {
+        width: 95vw;
+    }
+}

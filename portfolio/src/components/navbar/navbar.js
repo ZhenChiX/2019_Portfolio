@@ -35,10 +35,10 @@ class Navbar extends Component {
               <div className="collapsible-body">
                 <ul className="inline">
                   <li>
-                    <Link to="/home">Capabilities</Link>
+                    <Link to="/">Capabilities</Link>
                   </li>
                   <li>
-                    <Link to="/">Works</Link>
+                    <Link to="/works">Works</Link>
                   </li>
                   <li>
                     <Link to="articles">What's New</Link>
@@ -48,8 +48,8 @@ class Navbar extends Component {
             </div>
           </nav>
         </div>
-        <Route path="/home/" component={Home} />
-        <Route path="/" exact component={Portfolios} />
+        <Route path="/" exact component={Home} />
+        <Route path="/works" component={Portfolios} />
         <Route path="/articles/" component={Articles} />
       </Router>
     );
